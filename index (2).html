@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Wedding Invitation</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .title-font {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero {
+      background:
+      linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-slide img {
+      height: 500px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- OPENING -->
+  <section id="opening" class="fixed inset-0 bg-black z-50 flex items-center justify-center flex-col text-center px-6">
+    <p class="uppercase tracking-[6px] text-sm text-gray-400 mb-3">
+      The Wedding Of
+    </p>
+
+    <h1 class="title-font text-6xl gold font-bold mb-4">
+      Tama & Alya
+    </h1>
+
+    <div id="guestName" class="mb-8 text-lg"></div>
+
+    <button onclick="openInvitation()"
+      class="px-8 py-4 rounded-full bg-yellow-600 hover:bg-yellow-500 transition text-black font-semibold">
+      Buka Undangan
+    </button>
+  </section>
+
+  <!-- MUSIC -->
+  <audio id="music" loop>
+    <source src="1.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- HERO -->
+  <section class="hero min-h-screen flex items-center justify-center text-center px-6">
+    <div>
+      <p class="uppercase tracking-[6px] text-sm text-gray-300 mb-3">
+        Wedding Invitation
+      </p>
+
+      <h1 class="title-font text-7xl gold font-bold mb-4">
+        Tama & Alya
+      </h1>
+
+      <p class="text-gray-300 max-w-xl mx-auto">
+        Dengan penuh rasa syukur kami mengundang Anda untuk hadir dalam hari bahagia kami.
+      </p>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="py-24 px-6 text-center">
+    <h2 class="title-font text-5xl gold mb-10">
+      Menuju Hari Bahagia
+    </h2>
+
+    <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="py-24 px-6 max-w-5xl mx-auto">
+    <h2 class="title-font text-5xl gold text-center mb-16">
+      Our Story
+    </h2>
+
+    <div class="space-y-8">
+
+      <div class="glass p-8 rounded-3xl">
+        <h3 class="text-2xl gold mb-3 font-semibold">2019 — Pertama Bertemu</h3>
+        <p class="text-gray-300 leading-8">
+          Tidak ada yang kebetulan di dunia ini. Pertemuan sederhana itu menjadi awal dari perjalanan panjang yang penuh cerita.
+        </p>
+      </div>
+
+      <div class="glass p-8 rounded-3xl">
+        <h3 class="text-2xl gold mb-3 font-semibold">2022 — Menjalin Hubungan</h3>
+        <p class="text-gray-300 leading-8">
+          Seiring waktu, kami belajar memahami, tumbuh bersama, dan saling menguatkan dalam setiap keadaan.
+        </p>
+      </div>
+
+      <div class="glass p-8 rounded-3xl">
+        <h3 class="text-2xl gold mb-3 font-semibold">2026 — Menuju Akad</h3>
+        <p class="text-gray-300 leading-8">
+          Dengan restu keluarga dan ridho Allah SWT, kami memutuskan melangkah ke jenjang pernikahan.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-24 px-6">
+    <h2 class="title-font text-5xl gold text-center mb-16">
+      Prewedding Gallery
+    </h2>
+
+    <div class="swiper mySwiper max-w-6xl mx-auto">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop" class="w-full" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop" class="w-full" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop" class="w-full" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT -->
+  <section class="py-24 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+
+    <div class="glass p-10 rounded-3xl text-center">
+      <h3 class="title-font text-4xl gold mb-6">Akad Nikah</h3>
+
+      <p class="mb-3">Minggu, 20 Desember 2026</p>
+      <p class="mb-3">09:00 WIB</p>
+      <p class="text-gray-300">
+        Grand Palace Ballroom
+      </p>
+    </div>
+
+    <div class="glass p-10 rounded-3xl text-center">
+      <h3 class="title-font text-4xl gold mb-6">Resepsi</h3>
+
+      <p class="mb-3">Minggu, 20 Desember 2026</p>
+      <p class="mb-3">19:00 WIB</p>
+      <p class="text-gray-300">
+        Grand Palace Ballroom
+      </p>
+    </div>
+
+  </section>
+
+  <!-- MAP -->
+  <section class="py-24 px-6 text-center">
+    <h2 class="title-font text-5xl gold mb-10">
+      Lokasi Acara
+    </h2>
+
+    <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden">
+      <iframe
+        src="https://maps.google.com/maps?q=batam&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- DIGITAL ENVELOPE -->
+  <section class="py-24 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="title-font text-5xl gold mb-12">
+      Amplop Digital
+    </h2>
+
+    <div class="glass rounded-3xl p-10">
+      <p class="mb-4 text-gray-300">Bank BCA</p>
+
+      <h3 class="text-3xl font-bold mb-6">
+        1234567890
+      </h3>
+
+      <button onclick="copyRek()"
+        class="bg-yellow-600 hover:bg-yellow-500 transition px-6 py-3 rounded-full text-black font-semibold">
+        Copy Nomor Rekening
+      </button>
+
+      <p id="copyText" class="mt-5 text-green-400"></p>
+    </div>
+  </section>
+
+  <!-- COMMENTS -->
+  <section class="py-24 px-6 max-w-4xl mx-auto">
+    <h2 class="title-font text-5xl gold text-center mb-12">
+      Ucapan & Doa
+    </h2>
+
+    <div class="glass rounded-3xl p-8">
+
+      <input id="name"
+        type="text"
+        placeholder="Nama"
+        class="w-full mb-4 bg-black/40 border border-white/10 p-4 rounded-xl outline-none">
+
+      <textarea id="message"
+        rows="4"
+        placeholder="Tulis ucapan..."
+        class="w-full mb-4 bg-black/40 border border-white/10 p-4 rounded-xl outline-none"></textarea>
+
+      <button onclick="sendComment()"
+        class="bg-yellow-600 hover:bg-yellow-500 transition px-6 py-3 rounded-full text-black font-semibold">
+        Kirim Ucapan
+      </button>
+
+      <div id="comments" class="mt-10 space-y-4"></div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-gray-500 border-t border-white/10">
+    Tama & Alya Wedding Invitation
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+
+    // AUTO GUEST NAME
+    const params = new URLSearchParams(window.location.search);
+    const guest = params.get('to') || 'Tamu Undangan';
+
+    document.getElementById('guestName').innerHTML = `
+      Kepada Yth.<br><span class="gold text-2xl">${guest}</span>
+    `;
+
+    // OPEN INVITATION
+    function openInvitation() {
+      document.getElementById('opening').style.display = 'none';
+      document.getElementById('music').play();
+    }
+
+    // SWIPER
+    new Swiper('.mySwiper', {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+      },
+      spaceBetween: 30,
+      centeredSlides: true,
+    });
+
+    // COUNTDOWN
+    const targetDate = new Date('Dec 20, 2026 09:00:00').getTime();
+
+    const countdown = setInterval(() => {
+
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').innerHTML = `
+
+        <div class="glass p-8 rounded-3xl">
+          <div class="text-5xl font-bold gold">${days}</div>
+          <div class="text-gray-400 mt-2">Hari</div>
+        </div>
+
+        <div class="glass p-8 rounded-3xl">
+          <div class="text-5xl font-bold gold">${hours}</div>
+          <div class="text-gray-400 mt-2">Jam</div>
+        </div>
+
+        <div class="glass p-8 rounded-3xl">
+          <div class="text-5xl font-bold gold">${minutes}</div>
+          <div class="text-gray-400 mt-2">Menit</div>
+        </div>
+
+        <div class="glass p-8 rounded-3xl">
+          <div class="text-5xl font-bold gold">${seconds}</div>
+          <div class="text-gray-400 mt-2">Detik</div>
+        </div>
+      `;
+
+    }, 1000);
+
+    // COPY REK
+    function copyRek() {
+      navigator.clipboard.writeText('1234567890');
+      document.getElementById('copyText').innerText = 'Nomor rekening berhasil disalin';
+    }
+
+    // COMMENT SYSTEM LOCAL
+    function sendComment() {
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+
+      if(!name || !message) return;
+
+      const comments = document.getElementById('comments');
+
+      comments.innerHTML += `
+        <div class="bg-black/30 border border-white/10 p-5 rounded-2xl">
+          <h4 class="gold font-semibold mb-2">${name}</h4>
+          <p class="text-gray-300">${message}</p>
+        </div>
+      `;
+
+      document.getElementById('name').value = '';
+      document.getElementById('message').value = '';
+    }
+
+  </script>
+
+</body>
+</html>
